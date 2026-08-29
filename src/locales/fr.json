@@ -1,0 +1,77 @@
+{
+  "RootLayout": {
+    "home_link": "Accueil",
+    "about_link": "À propos",
+    "counter_link": "Compteur",
+    "portfolio_link": "Portfolio",
+    "sign_in_link": "Connexion",
+    "sign_up_link": "Inscription"
+  },
+  "BaseTemplate": {
+    "description": "Modèle de départ pour votre projet Next.js",
+    "footer_text": "© {year} {name}.",
+    "main_navigation_label": "Navigation principale"
+  },
+  "Index": {
+    "meta_title": "My App",
+    "meta_description": "Un modèle Next.js pour créer des applications web.",
+    "welcome_title": "Bienvenue sur My App",
+    "welcome_body": "Ceci est un modèle de départ générique. Remplacez ce contenu par celui de votre produit."
+  },
+  "Counter": {
+    "meta_title": "Compteur",
+    "meta_description": "Exemple d'opération en base de données"
+  },
+  "CounterForm": {
+    "presentation": "Le compteur est stocké en base de données et incrémenté de la valeur indiquée.",
+    "label_increment": "Incrémenter de",
+    "button_increment": "Incrémenter",
+    "error_increment_range": "La valeur doit être comprise entre 1 et 3"
+  },
+  "CurrentCount": {
+    "count": "Compte : {count}"
+  },
+  "About": {
+    "meta_title": "À propos",
+    "meta_description": "Description de la page À propos",
+    "about_paragraph": "Bienvenue sur la page À propos. Remplacez ce texte par des informations sur votre produit."
+  },
+  "Portfolio": {
+    "meta_title": "Portfolio",
+    "meta_description": "Bienvenue sur la page portfolio",
+    "presentation": "Ceci est un listing de portfolio d'exemple. Remplacez ces éléments par vos propres travaux.",
+    "portfolio_name": "Portfolio {name}"
+  },
+  "PortfolioSlug": {
+    "meta_title": "Portfolio {slug}",
+    "meta_description": "Description du portfolio {slug}",
+    "header": "Portfolio {slug}",
+    "content": "Remplacez cette description d'exemple par les détails de votre projet."
+  },
+  "SignIn": {
+    "meta_title": "Connexion",
+    "meta_description": "Connectez-vous à votre compte",
+    "placeholder": "Intégrez votre fournisseur d'authentification pour activer la connexion."
+  },
+  "SignUp": {
+    "meta_title": "Inscription",
+    "meta_description": "Créer un nouveau compte",
+    "placeholder": "Intégrez votre fournisseur d'authentification pour activer l'inscription."
+  },
+  "Dashboard": {
+    "hello_message": "Bonjour !"
+  },
+  "DashboardLayout": {
+    "meta_title": "Tableau de bord",
+    "meta_description": "Gérez votre compte depuis le tableau de bord.",
+    "dashboard_link": "Tableau de bord",
+    "user_profile_link": "Profil",
+    "home_link": "Accueil"
+  },
+  "UserProfile": {
+    "placeholder": "Remplacez cette page par votre profil utilisateur ou les paramètres du compte."
+  },
+  "LocaleSwitcher": {
+    "change_language": "Changer de langue"
+  }
+}

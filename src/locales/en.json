@@ -1,0 +1,77 @@
+{
+  "RootLayout": {
+    "home_link": "Home",
+    "about_link": "About",
+    "counter_link": "Counter",
+    "portfolio_link": "Portfolio",
+    "sign_in_link": "Sign in",
+    "sign_up_link": "Sign up"
+  },
+  "BaseTemplate": {
+    "description": "Starter template for your Next.js project",
+    "footer_text": "© {year} {name}.",
+    "main_navigation_label": "Main navigation"
+  },
+  "Index": {
+    "meta_title": "My App",
+    "meta_description": "A Next.js starter template for building web applications.",
+    "welcome_title": "Welcome to My App",
+    "welcome_body": "This is a generic starter template. Replace this content with your product."
+  },
+  "Counter": {
+    "meta_title": "Counter",
+    "meta_description": "An example of a database operation"
+  },
+  "CounterForm": {
+    "presentation": "The counter is stored in the database and incremented by the value you provide.",
+    "label_increment": "Increment by",
+    "button_increment": "Increment",
+    "error_increment_range": "Value must be between 1 and 3"
+  },
+  "CurrentCount": {
+    "count": "Count: {count}"
+  },
+  "About": {
+    "meta_title": "About",
+    "meta_description": "About page description",
+    "about_paragraph": "Welcome to the about page. Replace this text with information about your product."
+  },
+  "Portfolio": {
+    "meta_title": "Portfolio",
+    "meta_description": "Welcome to the portfolio page",
+    "presentation": "This is a sample portfolio listing. Replace these items with your own work.",
+    "portfolio_name": "Portfolio {name}"
+  },
+  "PortfolioSlug": {
+    "meta_title": "Portfolio {slug}",
+    "meta_description": "Portfolio {slug} description",
+    "header": "Portfolio {slug}",
+    "content": "Replace this sample project description with details about your work."
+  },
+  "SignIn": {
+    "meta_title": "Sign in",
+    "meta_description": "Sign in to your account",
+    "placeholder": "Plug in your authentication provider to enable sign in."
+  },
+  "SignUp": {
+    "meta_title": "Sign up",
+    "meta_description": "Create a new account",
+    "placeholder": "Plug in your authentication provider to enable sign up."
+  },
+  "Dashboard": {
+    "hello_message": "Hello!"
+  },
+  "DashboardLayout": {
+    "meta_title": "Dashboard",
+    "meta_description": "Manage your account from the dashboard.",
+    "dashboard_link": "Dashboard",
+    "user_profile_link": "Profile",
+    "home_link": "Home"
+  },
+  "UserProfile": {
+    "placeholder": "Replace this page with your user profile or account settings."
+  },
+  "LocaleSwitcher": {
+    "change_language": "Change language"
+  }
+}
