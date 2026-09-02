@@ -7,12 +7,9 @@
     "sign_out_link": "Log out"
   },
   "Footer": {
-    "footer_text": "© {year} {name}. All rights reserved.",
-    "main_navigation_label": "Main navigation"
+    "footer_text": "© {year} {name}. All rights reserved."
   },
   "Home": {
-    "meta_title": "My App - Home",
-    "meta_description": "A Next.js enterprise template for building web applications.",
     "badge": "Next.js Enterprise Template",
     "title": "Build scalable applications in minutes",
     "subtitle": "Professional template configured with i18n, dark mode, strict typing, and modern architecture.",
@@ -26,8 +23,6 @@
     "feature3Desc": "Clean styles with Tailwind CSS and automatic system theme detection."
   },
   "About": {
-    "meta_title": "About - My App",
-    "meta_description": "Learn more about our platform and mission.",
     "title": "About Us",
     "description": "Welcome to our platform. We build scalable, high-performance web applications using modern web standards."
   },
@@ -75,15 +70,6 @@
       "affairRequired": "Subject is required.",
       "messageTooShort": "Message must be at least 10 characters long."
     }
-  },
-  "Dashboard": {
-    "meta_title": "Dashboard",
-    "meta_description": "Manage your account from the dashboard.",
-    "hello_message": "Hello!",
-    "dashboard_link": "Dashboard",
-    "user_profile_link": "Profile",
-    "home_link": "Home",
-    "user_profile_placeholder": "Replace this page with your user profile or account settings."
   },
   "LocaleSwitcher": {
     "change_language": "Change language"

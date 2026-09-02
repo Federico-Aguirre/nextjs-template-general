@@ -7,6 +7,11 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     tsconfigPaths: true,
+    alias: {
+      'next/navigation': 'next/navigation.js',
+      'next/router': 'next/router.js',
+      'next/headers': 'next/headers.js',
+    },
   },
   test: {
     coverage: {

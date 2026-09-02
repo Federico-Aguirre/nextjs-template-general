@@ -7,12 +7,9 @@
     "sign_out_link": "Cerrar sesión"
   },
   "Footer": {
-    "footer_text": "© {year} {name}. Todos los derechos reservados.",
-    "main_navigation_label": "Navegación principal"
+    "footer_text": "© {year} {name}. Todos los derechos reservados."
   },
   "Home": {
-    "meta_title": "Mi Aplicación - Inicio",
-    "meta_description": "Una plantilla Next.js empresarial para construir aplicaciones web.",
     "badge": "Plantilla Next.js Empresarial",
     "title": "Construye aplicaciones escalables en minutos",
     "subtitle": "Plantilla profesional configurada con i18n, modo oscuro, tipado estricto y arquitectura moderna.",
@@ -26,8 +23,6 @@
     "feature3Desc": "Estilos limpios con Tailwind CSS y detección automática del tema del sistema."
   },
   "About": {
-    "meta_title": "Nosotros - Mi Aplicación",
-    "meta_description": "Conoce más sobre nuestra plataforma y misión.",
     "title": "Sobre nosotros",
     "description": "Bienvenido a nuestra plataforma. Construimos aplicaciones web escalables y de alto rendimiento utilizando estándares web modernos."
   },
@@ -75,15 +70,6 @@
       "affairRequired": "El asunto es obligatorio.",
       "messageTooShort": "El mensaje debe tener al menos 10 caracteres."
     }
-  },
-  "Dashboard": {
-    "meta_title": "Panel de control",
-    "meta_description": "Gestiona tu cuenta desde el panel de control.",
-    "hello_message": "¡Hola!",
-    "dashboard_link": "Panel de control",
-    "user_profile_link": "Perfil",
-    "home_link": "Inicio",
-    "user_profile_placeholder": "Reemplaza esta página con tu perfil de usuario o configuración de la cuenta."
   },
   "LocaleSwitcher": {
     "change_language": "Cambiar idioma"
