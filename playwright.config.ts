@@ -1,37 +1,23 @@
 import type { ChromaticConfig } from '@chromatic-com/playwright';
 import { defineConfig, devices } from '@playwright/test';
 
-// Use process.env.PORT by default and fallback to port 3008
-// to avoid conflicts with the Next.js default port 3000.
 const PORT = process.env.PORT ?? '3008';
-
-// Set webServer.url and use.baseURL with the location of the WebServer respecting the correct set port
 const baseURL = `http://localhost:${PORT}`;
 
-/**
- * See https://playwright.dev/docs/test-configuration.
- */
 export default defineConfig<ChromaticConfig>({
   testDir: './tests',
-  // Look for files with the .integ.js or .e2e.js extension
   testMatch: '*.@(integ|e2e).?(c|m)[jt]s?(x)',
-  // Timeout per test, test running locally are slower due to database connections with PGLite
   timeout: 30 * 1000,
-  // Fail the build on CI if you accidentally left test.only in the source code.
   forbidOnly: !!process.env.CI,
-  // Reporter to use. See https://playwright.dev/docs/test-reporters
   reporter: process.env.CI ? 'github' : 'list',
 
   expect: {
-    // Set timeout for async expect matchers
     timeout: 15 * 1000,
   },
 
-  // Run your local dev server before starting the tests:
-  // https://playwright.dev/docs/test-advanced#launching-a-development-web-server-during-the-tests
   webServer: {
     command: process.env.CI
-      ? "pglite-server -m 100 --run 'run-s db:migrate && node .next/standalone/server.js'"
+      ? "pglite-server -m 100 --run 'npm run db:migrate && node .next/standalone/server.js'"
       : "pglite-server -m 100 --run 'run-s db:migrate dev:next'",
     url: baseURL,
     timeout: 60 * 1000,
@@ -44,7 +30,6 @@ export default defineConfig<ChromaticConfig>({
     },
   },
 
-  // Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions.
   use: {
     baseURL,
     trace: process.env.CI ? 'on' : 'retain-on-failure',
