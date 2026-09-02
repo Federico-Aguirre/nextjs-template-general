@@ -75,34 +75,37 @@ Starts the local PGlite database instance and the Next.js development server con
 | `vitest.config.ts` | Vitest environment setup, aliases, and component testing config |
 | `playwright.config.ts` | End-to-end browser testing matrix, ports, and base URL setup |
 | `lefthook.yml` | Pre-commit/pre-push Git hook automation definitions |
-| `knip.json` | Rules for dead code detection, entry points, and ignored paths |
+| `knip.ts` | Rules for dead code detection, entry points, and ignored paths |
 | `.env.example` | Template detailing required environment variables |
 
 ---
 
 ## Directory Layout
 
-```text
-├── .github/             # CI/CD Workflows (CI, Releases) & Dependabot config
-├── .storybook/          # Storybook configuration, main file, and preview setups
-├── .vscode/             # Editor settings, extension recommendations, file nesting
-├── public/              # Static assets (fonts, icons, public images)
+├── .github/             # CI/CD Workflows (CI, Releases), custom actions & Dependabot
+├── .storybook/          # Storybook setup, preview configs & Vitest runner setup
+├── .vscode/             # Editor settings, extension recommendations & tasks
+├── migrations/          # Drizzle ORM SQL migration files
+├── public/              # Static public assets (images, favicon)
 ├── src/
-│   ├── app/             # App Router pages, API endpoints, layouts, Server Actions
-│   ├── components/      # Modular UI components & Storybook stories (*.stories.tsx)
-│   ├── database/        # Drizzle schemas, migrations, seeders, connection setup
-│   ├── lib/             # Utilities, structured logger, env validation, i18n setup
-│   ├── locales/         # Translation JSON dictionaries
+│   ├── actions/         # Next.js Server Actions (auth, contact, etc.)
+│   ├── app/             # App Router localized pages ([locale]), fonts, sitemap, robots
+│   ├── components/      # Shared layout components & UI primitives (shadcn/ui)
+│   ├── database/        # Drizzle ORM connection, schemas, models & utils
+│   ├── lib/             # Env validation, logger, i18n routing setup & schemas
+│   ├── locales/         # i18n translation dictionaries (en.json, es.json)
 │   ├── store/           # Zustand client state slices
-│   ├── styles/          # Global styles, Tailwind CSS directives
+│   ├── styles/          # Global styles & Tailwind CSS directives
 │   ├── types/           # Shared TypeScript interfaces & types
-│   └── validations/     # Zod validation schemas
-├── tests/               # Playwright E2E suites & MSW API mocks
-├── architecture.md      # In-depth system architecture blueprint
+│   ├── utils/           # Application config & core helper functions
+│   ├── validations/     # Zod validation schemas
+│   └── proxy.ts         # Request proxy & handler utilities
+├── tests/               # Playwright E2E and integration suites
+├── AGENTS.md / CLAUDE.md# AI agent instructions & project guidelines
+├── architecture.md      # Detailed architectural specification blueprint
 ├── drizzle.config.ts    # Database ORM config
-├── knip.json            # Dead code analyzer config
+├── knip.ts              # Dead code & unused dependency analyzer config
 ├── lefthook.yml         # Git hooks config
 ├── playwright.config.ts # E2E test runner config
 ├── vitest.config.ts     # Unit/Component test runner config
 └── README.md            # Repository documentation
-```
