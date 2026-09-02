@@ -17,7 +17,7 @@ export default defineConfig<ChromaticConfig>({
 
   webServer: {
     command: process.env.CI
-      ? "pglite-server -m 100 --run 'npm run db:migrate && node .next/standalone/server.js'"
+      ? "pglite-server -m 100 --run 'npm run start:standalone'"
       : "pglite-server -m 100 --run 'run-s db:migrate dev:next'",
     url: baseURL,
     timeout: 60 * 1000,

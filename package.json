@@ -3,6 +3,7 @@
   "author": "Federico Aguirre",
   "type": "module",
   "scripts": {
+    "start:standalone": "npm run db:migrate && node .next/standalone/server.js",
     "storybook:test": "vitest run --config .storybook/vitest.config.ts --passWithNoTests",
     "test:e2e": "playwright test --pass-with-no-tests",
     "dev:next": "next dev",

@@ -18,6 +18,7 @@
     "ms-azuretools.vscode-docker",
     "amazonwebservices.aws-toolkit-vscode",
     "ms-vscode-remote.remote-containers",
-    "yoavbls.pretty-ts-errors"
+    "yoavbls.pretty-ts-errors",
+    "github.vscode-github-actions"
   ]
 }
