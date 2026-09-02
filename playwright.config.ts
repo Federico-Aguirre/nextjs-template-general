@@ -17,10 +17,10 @@ export default defineConfig<ChromaticConfig>({
 
   webServer: {
     command: process.env.CI
-      ? "pglite-server -m 100 --run 'npm run start:standalone'"
+      ? "pglite-server -m 100 --run 'run-s db:migrate start'"
       : "pglite-server -m 100 --run 'run-s db:migrate dev:next'",
     url: baseURL,
-    timeout: 60 * 1000,
+    timeout: 120 * 1000,
     reuseExistingServer: !process.env.CI,
     gracefulShutdown: { signal: 'SIGTERM', timeout: 2 * 1000 },
     env: {
