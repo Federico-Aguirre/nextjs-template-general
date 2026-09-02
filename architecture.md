@@ -22,22 +22,30 @@ This project is built on Next.js App Router, using a modern TypeScript stack des
 
 ## 3. Key Directory Layout
 
-```text
-├── .github/              # CI/CD Workflows & Dependabot
-├── .storybook/           # Storybook configuration & setup
-├── .vscode/              # Editor settings, tasks, and recommended extensions
-├── public/               # Static assets & public files
+├── .github/             # CI/CD Workflows (CI, Releases), custom actions & Dependabot
+├── .storybook/          # Storybook setup, preview configs & Vitest runner setup
+├── .vscode/             # Editor settings, extension recommendations & tasks
+├── migrations/          # Drizzle ORM SQL migration files
+├── public/              # Static public assets (images, favicon)
 ├── src/
-│   ├── app/              # Next.js App Router pages, layouts, and Server Actions
-│   ├── components/       # Reusable UI elements, Shadcn components, and controls
-│   ├── database/         # Drizzle schemas, migrations, connection & models
-│   ├── lib/             # Core utilities, Logger, Env validations & I18n setup
-│   ├── locales/          # Translation dictionaries (JSON)
-│   ├── store/            # Client global state stores (Zustand)
-│   ├── styles/           # Global CSS and Tailwind directives
-│   ├── templates/        # Structural layout templates & stories
-│   ├── types/            # Global TypeScript interfaces and definitions
-│   ├── utils/            # Helper functions and core application config
-│   └── validations/      # Schema validation logic
-├── tests/                # E2E (Playwright) and Integration test suites
-└── architecture.md       # Core architectural guidelines
+│   ├── actions/         # Next.js Server Actions (auth, contact, etc.)
+│   ├── app/             # App Router localized pages ([locale]), fonts, sitemap, robots
+│   ├── components/      # Shared layout components & UI primitives (shadcn/ui)
+│   ├── database/        # Drizzle ORM connection, schemas, models & utils
+│   ├── lib/             # Env validation, logger, i18n routing setup & schemas
+│   ├── locales/         # i18n translation dictionaries (en.json, es.json)
+│   ├── store/           # Zustand client state slices
+│   ├── styles/          # Global styles & Tailwind CSS directives
+│   ├── types/           # Shared TypeScript interfaces & types
+│   ├── utils/           # Application config & core helper functions
+│   ├── validations/     # Zod validation schemas
+│   └── proxy.ts         # Request proxy & handler utilities
+├── tests/               # Playwright E2E and integration suites
+├── AGENTS.md / CLAUDE.md# AI agent instructions & project guidelines
+├── architecture.md      # Detailed architectural specification blueprint
+├── drizzle.config.ts    # Database ORM config
+├── knip.ts              # Dead code & unused dependency analyzer config
+├── lefthook.yml         # Git hooks config
+├── playwright.config.ts # E2E test runner config
+├── vitest.config.ts     # Unit/Component test runner config
+└── README.md            # Repository documentation
