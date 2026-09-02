@@ -1,7 +1,13 @@
+/**
+ * @file global-error.tsx
+ * @description Root global error boundary for Next.js App Router.
+ * Catches unhandled exceptions—including errors inside the root layout—and renders a fallback recovery UI.
+ */
+
 'use client';
 
 import NextError from 'next/error';
-import { routing } from '@/libs/I18nRouting';
+import { routing } from '@/lib/I18nRouting';
 
 export default function GlobalError() {
   return (

@@ -1,0 +1,16 @@
+# File: .cursorignore
+# Description: Defines paths and patterns ignored by Cursor AI during codebase indexing.
+# Prevents LLM context pollution from build artifacts, dependencies, and generated logs.
+
+node_modules
+.next
+out
+build
+dist
+coverage
+test-results
+storybook-static
+.git
+*.log
+package-lock.json
+*.svg

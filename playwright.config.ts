@@ -1,9 +1,9 @@
-import type { ChromaticConfig } from "@chromatic-com/playwright";
-import { defineConfig, devices } from "@playwright/test";
+import type { ChromaticConfig } from '@chromatic-com/playwright';
+import { defineConfig, devices } from '@playwright/test';
 
 // Use process.env.PORT by default and fallback to port 3008
 // to avoid conflicts with the Next.js default port 3000.
-const PORT = process.env.PORT ?? "3008";
+const PORT = process.env.PORT ?? '3008';
 
 // Set webServer.url and use.baseURL with the location of the WebServer respecting the correct set port
 const baseURL = `http://localhost:${PORT}`;
@@ -12,15 +12,15 @@ const baseURL = `http://localhost:${PORT}`;
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig<ChromaticConfig>({
-  testDir: "./tests",
+  testDir: './tests',
   // Look for files with the .integ.js or .e2e.js extension
-  testMatch: "*.@(integ|e2e).?(c|m)[jt]s?(x)",
+  testMatch: '*.@(integ|e2e).?(c|m)[jt]s?(x)',
   // Timeout per test, test running locally are slower due to database connections with PGLite
   timeout: 30 * 1000,
   // Fail the build on CI if you accidentally left test.only in the source code.
   forbidOnly: !!process.env.CI,
   // Reporter to use. See https://playwright.dev/docs/test-reporters
-  reporter: process.env.CI ? "github" : "list",
+  reporter: process.env.CI ? 'github' : 'list',
 
   expect: {
     // Set timeout for async expect matchers
@@ -36,9 +36,9 @@ export default defineConfig<ChromaticConfig>({
     url: baseURL,
     timeout: 60 * 1000,
     reuseExistingServer: !process.env.CI,
-    gracefulShutdown: { signal: "SIGTERM", timeout: 2 * 1000 },
+    gracefulShutdown: { signal: 'SIGTERM', timeout: 2 * 1000 },
     env: {
-      BROWSER_TO_TERMINAL_DISABLED: "true",
+      BROWSER_TO_TERMINAL_DISABLED: 'true',
       NEXT_PUBLIC_APP_URL: baseURL,
       PORT,
     },
@@ -47,21 +47,21 @@ export default defineConfig<ChromaticConfig>({
   // Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions.
   use: {
     baseURL,
-    trace: process.env.CI ? "on" : "retain-on-failure",
-    video: process.env.CI ? "retain-on-failure" : undefined,
+    trace: process.env.CI ? 'on' : 'retain-on-failure',
+    video: process.env.CI ? 'retain-on-failure' : undefined,
     disableAutoSnapshot: true,
   },
 
   projects: [
     {
-      name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
     },
     ...(process.env.CI
       ? [
           {
-            name: "firefox",
-            use: { ...devices["Desktop Firefox"] },
+            name: 'firefox',
+            use: { ...devices['Desktop Firefox'] },
           },
         ]
       : []),

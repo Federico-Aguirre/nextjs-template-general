@@ -7,7 +7,7 @@ const localePrefix: LocalePrefixMode = 'as-needed';
 export const AppConfig = {
   name: 'My App',
   i18n: {
-    locales: ['en', 'fr'],
+    locales: ['en', 'es'],
     defaultLocale: 'en',
     localePrefix,
   },

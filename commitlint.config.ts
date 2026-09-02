@@ -1,12 +1,12 @@
-import type { UserConfig } from "@commitlint/types";
+import type { UserConfig } from '@commitlint/types';
 
 const Configuration: UserConfig = {
-  extends: ["@commitlint/config-conventional"],
+  extends: ['@commitlint/config-conventional'],
   ignores: [
-    (message) =>
-      message.startsWith("chore: bump") ||
-      message.startsWith("Updating") ||
-      message.includes("chore(deps)"),
+    (message: string) =>
+      message.startsWith('chore: bump') ||
+      message.startsWith('Updating') ||
+      message.includes('chore(deps)'),
   ],
 };
 

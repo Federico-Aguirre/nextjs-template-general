@@ -1,69 +1,65 @@
-# Dependencias
+# Dependencies
 /node_modules
 /.pnp
 .pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
 
-# Testing y Cobertura
-/coverage
-/vitest-test-results
+# Next.js, Build, and Cache
+/.next/
+/out/
+/build/
+*.tsbuildinfo
+next-env.d.ts
+.turbo/
+.vercel/
+
+# Local and Temporary Databases (PGLite / SQLite / Drizzle)
+*.db
+*.db-*
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite-*
+.pglite/
+pglite-data/
+/local
+
+# Testing, Coverage, and Storybook
+/coverage/
+/vitest-test-results/
 /test-results/
 /playwright-report/
 /playwright/.cache/
+/storybook-static/
+*storybook.log
 
-# Next.js y Builds
-/.next/
-/out/
-/build
-*.tsbuildinfo
-next-env.d.ts
+# Environment Variables (Keeps .env.example and .env.production)
+.env
+.env*.local
+.env.local
+.env.development.local
+.env.test.local
+!.env.example
+!.env.production
 
-# Entorno de desarrollo e IDEs
+# IDE Configuration (Keeps team settings inside .vscode)
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.idea
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
-# Archivos del Sistema Operativo
+# OS & Logs
 .DS_Store
-*.pem
 Thumbs.db
-
-# Logs y Debugging
+*.pem
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
-
-# Variables de Entorno Locales
-.env*.local
-.env.local
-.env.production.local
-
-# Bases de Datos Locales y Temporales (PGLite / SQLite / Drizzle)
-*.db
-*.db-journal
-*.sqlite
-*.sqlite-journal
-.pglite/
-pglite-data/
-/local
-
-# Despliegue (Vercel)
-.vercel
-
-# Storybook
-storybook-static
-*storybook.log
-build-archive.log

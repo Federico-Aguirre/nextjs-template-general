@@ -1,3 +1,7 @@
+# File: dependabot.yml
+# Description: Configuration file for GitHub Dependabot.
+# Automates scheduled dependency security patches and version updates for npm packages and GitHub Actions.
+
 version: 2
 updates:
   # Enable version updates for npm

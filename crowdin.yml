@@ -1,3 +1,7 @@
+# File: crowdin.yml
+# Description: Configuration for Crowdin CLI and GitHub Actions.
+# Manages the automated sync of source translation files and localized strings between the repository and Crowdin.
+
 #
 # Your Crowdin credentials
 #

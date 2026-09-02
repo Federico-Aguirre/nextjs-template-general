@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { routing } from '@/libs/I18nRouting';
+import { routing } from '@/lib/I18nRouting';
 import { getI18nPath } from './Helpers';
 
 describe('Helpers', () => {
@@ -13,9 +13,9 @@ describe('Helpers', () => {
 
     it('prefixes path with locale when locale is not default', () => {
       const url = '/random-url';
-      const locale = 'fr';
+      const locale = 'es';
 
-      expect(getI18nPath(url, locale)).toBe(`/fr${url}`);
+      expect(getI18nPath(url, locale)).toBe(`/es${url}`);
     });
   });
 });

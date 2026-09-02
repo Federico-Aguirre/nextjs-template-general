@@ -1,0 +1,91 @@
+{
+  "RootLayout": {
+    "home_link": "Inicio",
+    "about_link": "Nosotros",
+    "contact_link": "Contacto",
+    "sign_in_link": "Iniciar sesión",
+    "sign_out_link": "Cerrar sesión"
+  },
+  "Footer": {
+    "footer_text": "© {year} {name}. Todos los derechos reservados.",
+    "main_navigation_label": "Navegación principal"
+  },
+  "Home": {
+    "meta_title": "Mi Aplicación - Inicio",
+    "meta_description": "Una plantilla Next.js empresarial para construir aplicaciones web.",
+    "badge": "Plantilla Next.js Empresarial",
+    "title": "Construye aplicaciones escalables en minutos",
+    "subtitle": "Plantilla profesional configurada con i18n, modo oscuro, tipado estricto y arquitectura moderna.",
+    "ctaPrimary": "Iniciar sesión",
+    "ctaSecondary": "Saber más",
+    "feature1Title": "Next.js App Router",
+    "feature1Desc": "Rendimiento óptimo con Server Components y estrategias avanzadas de renderizado.",
+    "feature2Title": "Internacionalización (i18n)",
+    "feature2Desc": "Soporte multilingüe listo para producción con rutas dinámicas y mensajes localizados.",
+    "feature3Title": "Diseño y Modo Oscuro",
+    "feature3Desc": "Estilos limpios con Tailwind CSS y detección automática del tema del sistema."
+  },
+  "About": {
+    "meta_title": "Nosotros - Mi Aplicación",
+    "meta_description": "Conoce más sobre nuestra plataforma y misión.",
+    "title": "Sobre nosotros",
+    "description": "Bienvenido a nuestra plataforma. Construimos aplicaciones web escalables y de alto rendimiento utilizando estándares web modernos."
+  },
+  "auth": {
+    "signInTitle": "Bienvenido de nuevo",
+    "signInSubtitle": "Inicia sesión en tu cuenta para continuar",
+    "signUpTitle": "Crear una cuenta",
+    "signUpSubtitle": "Ingresa tus datos a continuación para comenzar",
+    "continueWithGoogle": "Continuar con Google",
+    "nameLabel": "Nombre",
+    "emailLabel": "Correo electrónico",
+    "passwordLabel": "Contraseña",
+    "loading": "Cargando...",
+    "signInButton": "Iniciar sesión",
+    "signUpButton": "Crear cuenta",
+    "noAccount": "¿No tienes una cuenta?",
+    "signUpLink": "Regístrate",
+    "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+    "signInLink": "Inicia sesión",
+    "loggedInSuccess": "¡Has iniciado sesión exitosamente!"
+  },
+  "contact": {
+    "meta_title": "Contacto - Mi Aplicación",
+    "meta_description": "Ponte en contacto con nuestro equipo.",
+    "title": "Contáctanos",
+    "description": "¿Tienes preguntas? Escríbenos y te responderemos lo antes posible.",
+    "sendMessage": "Envíanos un mensaje",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "affair": "Asunto",
+    "message": "Mensaje",
+    "send": "Enviar mensaje",
+    "sending": "Enviando...",
+    "messages": {
+      "success": "¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.",
+      "serverError": "Ocurrió un error inesperado en el servidor. Por favor, inténtalo de nuevo más tarde.",
+      "rateLimitExceeded": "Demasiados intentos. Por favor, inténtalo de nuevo en un minuto.",
+      "invalidData": "Los datos proporcionados no son válidos.",
+      "submittedTooFast": "Envío detectado como spam (enviado demasiado rápido).",
+      "serviceError": "No se pudo entregar el mensaje a través del servicio de correo."
+    },
+    "errors": {
+      "nameRequired": "El nombre es obligatorio.",
+      "invalidEmail": "Por favor, ingresa un correo electrónico válido.",
+      "affairRequired": "El asunto es obligatorio.",
+      "messageTooShort": "El mensaje debe tener al menos 10 caracteres."
+    }
+  },
+  "Dashboard": {
+    "meta_title": "Panel de control",
+    "meta_description": "Gestiona tu cuenta desde el panel de control.",
+    "hello_message": "¡Hola!",
+    "dashboard_link": "Panel de control",
+    "user_profile_link": "Perfil",
+    "home_link": "Inicio",
+    "user_profile_placeholder": "Reemplaza esta página con tu perfil de usuario o configuración de la cuenta."
+  },
+  "LocaleSwitcher": {
+    "change_language": "Cambiar idioma"
+  }
+}

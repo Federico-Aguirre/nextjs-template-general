@@ -6,14 +6,12 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "moduleResolution": "bundler",
     "isolatedModules": true,
-
     // Type Safety - Foundation
     "strict": true,
     "alwaysStrict": true,
     "strictNullChecks": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
-
     // Type Safety - Advanced
     "noUncheckedIndexedAccess": true,
     "noImplicitReturns": true,
@@ -25,27 +23,24 @@
     "allowUnusedLabels": false,
     "useUnknownInCatchVariables": true,
     "noImplicitOverride": true,
-
     // Interoperability
     "allowJs": true,
     "checkJs": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-
     // Build & Performance
     "skipLibCheck": true,
     "removeComments": true,
     "preserveConstEnums": true,
     "forceConsistentCasingInFileNames": true,
-
     // Project Structure
     "paths": {
       "@/*": ["./src/*"],
-      "@/public/*": ["./public/*"]
+      "@/public/*": ["./public/*"],
+      "@auth/*": ["./src/app/[locale]/(auth)/*"]
     },
-
     // Next.js Project Configuration
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "noEmit": true,
     "plugins": [

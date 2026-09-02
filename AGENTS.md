@@ -26,7 +26,7 @@ Conventional Commits standard: `type: summary` without mandatory scope.
 
 ## Environment Variables
 
-All env variables must be defined and validated in `src/libs/Env.ts`; never access `process.env` directly in application code.
+All env variables must be defined and validated in `src/lib/Env.ts`; never access `process.env` directly in application code.
 
 ## Styling
 

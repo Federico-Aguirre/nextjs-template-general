@@ -1,3 +1,7 @@
+# File: action.yml
+# Description: Custom composite GitHub Action for project workspace setup.
+# Standardizes Node.js environment initialization, package manager caching, and dependency installation across workflows.
+
 name: Setup Node.js and dependencies
 description: Setup Node.js environment with npm dependencies
 

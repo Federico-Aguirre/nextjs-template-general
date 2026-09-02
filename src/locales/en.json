@@ -2,74 +2,88 @@
   "RootLayout": {
     "home_link": "Home",
     "about_link": "About",
-    "counter_link": "Counter",
-    "portfolio_link": "Portfolio",
-    "sign_in_link": "Sign in",
-    "sign_up_link": "Sign up"
+    "contact_link": "Contact",
+    "sign_in_link": "Log in",
+    "sign_out_link": "Log out"
   },
-  "BaseTemplate": {
-    "description": "Starter template for your Next.js project",
-    "footer_text": "© {year} {name}.",
+  "Footer": {
+    "footer_text": "© {year} {name}. All rights reserved.",
     "main_navigation_label": "Main navigation"
   },
-  "Index": {
-    "meta_title": "My App",
-    "meta_description": "A Next.js starter template for building web applications.",
-    "welcome_title": "Welcome to My App",
-    "welcome_body": "This is a generic starter template. Replace this content with your product."
-  },
-  "Counter": {
-    "meta_title": "Counter",
-    "meta_description": "An example of a database operation"
-  },
-  "CounterForm": {
-    "presentation": "The counter is stored in the database and incremented by the value you provide.",
-    "label_increment": "Increment by",
-    "button_increment": "Increment",
-    "error_increment_range": "Value must be between 1 and 3"
-  },
-  "CurrentCount": {
-    "count": "Count: {count}"
+  "Home": {
+    "meta_title": "My App - Home",
+    "meta_description": "A Next.js enterprise template for building web applications.",
+    "badge": "Next.js Enterprise Template",
+    "title": "Build scalable applications in minutes",
+    "subtitle": "Professional template configured with i18n, dark mode, strict typing, and modern architecture.",
+    "ctaPrimary": "Sign In",
+    "ctaSecondary": "Learn More",
+    "feature1Title": "Next.js App Router",
+    "feature1Desc": "Optimal performance with Server Components and advanced rendering strategies.",
+    "feature2Title": "Internationalization (i18n)",
+    "feature2Desc": "Production-ready multilingual support with dynamic routes and localized messaging.",
+    "feature3Title": "Design & Dark Mode",
+    "feature3Desc": "Clean styles with Tailwind CSS and automatic system theme detection."
   },
   "About": {
-    "meta_title": "About",
-    "meta_description": "About page description",
-    "about_paragraph": "Welcome to the about page. Replace this text with information about your product."
+    "meta_title": "About - My App",
+    "meta_description": "Learn more about our platform and mission.",
+    "title": "About Us",
+    "description": "Welcome to our platform. We build scalable, high-performance web applications using modern web standards."
   },
-  "Portfolio": {
-    "meta_title": "Portfolio",
-    "meta_description": "Welcome to the portfolio page",
-    "presentation": "This is a sample portfolio listing. Replace these items with your own work.",
-    "portfolio_name": "Portfolio {name}"
+  "auth": {
+    "signInTitle": "Welcome back",
+    "signInSubtitle": "Sign in to your account to continue",
+    "signUpTitle": "Create an account",
+    "signUpSubtitle": "Enter your details below to get started",
+    "continueWithGoogle": "Continue with Google",
+    "nameLabel": "Name",
+    "emailLabel": "Email address",
+    "passwordLabel": "Password",
+    "loading": "Loading...",
+    "signInButton": "Sign In",
+    "signUpButton": "Create Account",
+    "noAccount": "Don't have an account?",
+    "signUpLink": "Sign up",
+    "alreadyHaveAccount": "Already have an account?",
+    "signInLink": "Sign in",
+    "loggedInSuccess": "You have logged in successfully!"
   },
-  "PortfolioSlug": {
-    "meta_title": "Portfolio {slug}",
-    "meta_description": "Portfolio {slug} description",
-    "header": "Portfolio {slug}",
-    "content": "Replace this sample project description with details about your work."
-  },
-  "SignIn": {
-    "meta_title": "Sign in",
-    "meta_description": "Sign in to your account",
-    "placeholder": "Plug in your authentication provider to enable sign in."
-  },
-  "SignUp": {
-    "meta_title": "Sign up",
-    "meta_description": "Create a new account",
-    "placeholder": "Plug in your authentication provider to enable sign up."
+  "contact": {
+    "meta_title": "Contact - My App",
+    "meta_description": "Get in touch with our team.",
+    "title": "Contact Us",
+    "description": "Have questions? Reach out to us and we'll respond as soon as possible.",
+    "sendMessage": "Send us a message",
+    "name": "Name",
+    "email": "Email",
+    "affair": "Subject",
+    "message": "Message",
+    "send": "Send message",
+    "sending": "Sending...",
+    "messages": {
+      "success": "Message sent successfully! We will get back to you soon.",
+      "serverError": "An unexpected server error occurred. Please try again later.",
+      "rateLimitExceeded": "Too many attempts. Please try again in a minute.",
+      "invalidData": "The data provided is invalid.",
+      "submittedTooFast": "Submission flagged as spam (submitted too fast).",
+      "serviceError": "Could not deliver the message via the email service."
+    },
+    "errors": {
+      "nameRequired": "Name is required.",
+      "invalidEmail": "Please enter a valid email address.",
+      "affairRequired": "Subject is required.",
+      "messageTooShort": "Message must be at least 10 characters long."
+    }
   },
   "Dashboard": {
-    "hello_message": "Hello!"
-  },
-  "DashboardLayout": {
     "meta_title": "Dashboard",
     "meta_description": "Manage your account from the dashboard.",
+    "hello_message": "Hello!",
     "dashboard_link": "Dashboard",
     "user_profile_link": "Profile",
-    "home_link": "Home"
-  },
-  "UserProfile": {
-    "placeholder": "Replace this page with your user profile or account settings."
+    "home_link": "Home",
+    "user_profile_placeholder": "Replace this page with your user profile or account settings."
   },
   "LocaleSwitcher": {
     "change_language": "Change language"

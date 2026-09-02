@@ -1,27 +1,28 @@
-import "./src/libs/Env";
-import type { NextConfig } from "next";
-import createNextIntlPlugin from "next-intl/plugin";
+import './src/lib/Env';
+import type { NextConfig } from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
 
-// Configuración base de Next.js
+// Base Next.js configuration
 const baseConfig: NextConfig = {
+  output: 'standalone',
   devIndicators: {
-    position: "bottom-right",
+    position: 'bottom-right',
   },
   poweredByHeader: false,
   reactStrictMode: true,
-  reactCompiler: process.env.NODE_ENV === "production",
+  reactCompiler: process.env.NODE_ENV === 'production',
   experimental: {
-    turbopackRustReactCompiler: process.env.NODE_ENV === "production",
+    turbopackRustReactCompiler: process.env.NODE_ENV === 'production',
   },
   logging: {
-    browserToTerminal: process.env.BROWSER_TO_TERMINAL_DISABLED !== "true",
+    browserToTerminal: process.env.BROWSER_TO_TERMINAL_DISABLED !== 'true',
   },
   outputFileTracingIncludes: {
-    "/": ["./migrations/**/*"],
+    '/': ['./migrations/**/*'],
   },
 };
 
-// Plugin de internacionalización (next-intl)
-const withNextIntl = createNextIntlPlugin("./src/libs/I18n.ts");
+// Internationalization plugin (next-intl)
+const withNextIntl = createNextIntlPlugin('./src/lib/I18n.ts');
 
 export default withNextIntl(baseConfig);

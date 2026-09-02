@@ -1,11 +1,9 @@
-import { setRequestLocale } from 'next-intl/server';
-
-export default async function AuthLayout(props: {
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await props.params;
-  setRequestLocale(locale);
-
-  return props.children;
+export default function AuthLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="flex flex-1 items-center justify-center">
+      <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-xl dark:ring-1 dark:ring-white/10 dark:bg-zinc-900">
+        {children}
+      </div>
+    </div>
+  );
 }

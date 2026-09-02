@@ -1,33 +1,21 @@
 import type { Metadata, Viewport } from 'next';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
+import localFont from 'next/font/local';
 import { notFound } from 'next/navigation';
-import { routing } from '@/libs/I18nRouting';
+import { Header } from '@/components/Header';
+import MotionProvider from '@/components/MotionProvider';
+import { routing } from '@/lib/I18nRouting';
 import '@/styles/global.css';
 
+const publicSans = localFont({
+  src: '../fonts/PublicSans-Medium.ttf',
+  variable: '--font-public-sans',
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
-  icons: [
-    {
-      rel: 'apple-touch-icon',
-      url: '/apple-touch-icon.png',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '32x32',
-      url: '/favicon-32x32.png',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '16x16',
-      url: '/favicon-16x16.png',
-    },
-    {
-      rel: 'icon',
-      url: '/favicon.ico',
-    },
-  ],
+  icons: '/favicon.ico',
 };
 
 export const viewport: Viewport = {
@@ -50,11 +38,21 @@ export default async function RootLayout(props: {
   }
 
   setRequestLocale(locale);
+  const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <body>
-        <NextIntlClientProvider>{props.children}</NextIntlClientProvider>
+    <html lang={locale} suppressHydrationWarning>
+      <body
+        className={`${publicSans.className} flex min-h-dvh flex-col bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100`}
+      >
+        <NextIntlClientProvider messages={messages}>
+          <MotionProvider>
+            <Header />
+            <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col sm:px-6 lg:px-8">
+              {props.children}
+            </main>
+          </MotionProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

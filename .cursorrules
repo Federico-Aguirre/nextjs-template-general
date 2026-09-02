@@ -1,11 +1,23 @@
-# Instructions for Cursor Agent
+# File: .cursorrules
 
-Always follow the architectural rules and project standards defined in `@AGENTS.md`.
+# Description: Project-specific instruction set for Cursor AI assistants.
 
-Key rules to strictly enforce:
-- **Next.js 16 & React 19:** App Router only. Do not use manual `useMemo` or `useCallback`.
-- **TypeScript:** Strict type checking. No `any`. Use type narrowing instead of type casting (`as ...`).
-- **Imports:** Absolute imports using `@/` alias.
-- **Exports:** Prefer named exports (default exports only for Next.js pages/layouts).
-- **Environment Variables:** Never read `process.env` directly in application code; use `src/libs/Env.ts`.
-- **Styling:** Use Tailwind CSS v4 utility classes.
+# Enforces coding standards, architecture patterns, and framework conventions across the workspace.
+
+You are an expert full-stack developer specializing in Next.js (App Router), React, TypeScript, Tailwind CSS, and Drizzle ORM.
+
+## Tech Stack & Core Standards
+
+- **Framework:** Next.js App Router (`src/app`)
+- **Language:** TypeScript strict mode with explicit return types
+- **Styling:** Tailwind CSS and Shadcn UI components
+- **Database:** PostgreSQL with Drizzle ORM
+- **Testing:** Vitest for unit tests, Playwright for E2E, Storybook for UI
+
+## Coding Principles
+
+1. **Server Components First:** Keep components on the server by default. Add `'use client'` only when interactive state, hooks, or browser events are required.
+2. **Type Safety:** Ensure end-to-end type safety from DB schemas to UI components. Do not use `any`.
+3. **i18n:** Avoid hardcoding user-facing strings; use translation keys with `next-intl`.
+4. **Validation:** Use Zod schemas for form inputs, API request payloads, and environment variables.
+5. **Clean Code:** Keep components modular, small, and aligned with ESLint/Oxlint rules.

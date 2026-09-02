@@ -1,8 +1,25 @@
 {
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
+  "editor.linkedEditing": true,
   "search.exclude": {
     "package-lock.json": true
+  },
+
+  // Neovim
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+  "extensions.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "remote.extensionKind": {
+    "asvetliakov.vscode-neovim": ["workspace"]
+  },
+
+  // Tailwind CSS
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "files.associations": {
+    "*.css": "tailwindcss"
   },
 
   // TypeScript
@@ -67,5 +84,23 @@
   // JSON Schema
   "json.schemaDownload.trustedDomains": {
     "https://ui.shadcn.com": true
-  }
+  },
+
+  // File Nesting
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    ".env.local": ".env.*",
+    "tsconfig.json": "tsconfig*",
+    "README.md": "README*",
+    "AGENTS.md": "CLAUDE.md, architecture.md, .cursor*",
+    ".gitignore": ".git*",
+    "Dockerfile": ".dockerignore, docker-compose.yml",
+    "codecov.yml": ".coderabbit.yaml, lefthook.yml, crowdin.yml, pnpm-lock.yaml",
+    "package.json": "package-lock.json",
+    "oxfmt.config.ts": "oxlint.config.ts",
+    "vitest.config.ts": "drizzle.config.ts, oxlint.config.ts, playwright.config.ts, tsconfig.json, tsconfig.tsbuildinfo, knip.config.ts,commitlint.config.ts, .editorconfig, next.config.ts, next-env.d.ts, components.json, postcss.config.*, oxfmt.config.ts, package.json, package-lock.json, , yarn.lock, bun.lockb, knip.json, knip.ts"
+  },
+  "terminal.integrated.cwd": "${workspaceFolder}",
+  "editor.snippetSuggestions": "top"
 }

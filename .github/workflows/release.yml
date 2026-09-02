@@ -1,3 +1,7 @@
+# File: release.yml
+# Description: GitHub Actions workflow for automated release management.
+# Handles semantic versioning, generating changelogs, and publishing GitHub releases upon successful CI completion.
+
 name: Release
 
 on:
