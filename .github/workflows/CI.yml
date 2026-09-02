@@ -10,6 +10,10 @@ on:
   pull_request:
     branches: [main]
 
+env:
+  DATABASE_URL: 'postgresql://postgres:postgres@localhost:5432/test_db'
+  NEXT_PUBLIC_APP_URL: 'http://localhost:3008'
+
 jobs:
   build:
     strategy:
@@ -37,8 +41,6 @@ jobs:
 
       - name: Build Next.js
         run: npm run build-local
-        env:
-          NEXT_PUBLIC_APP_URL: http://localhost:3008
 
       - if: matrix.node-version == '24.x' && success()
         name: Cache Next.js build output
@@ -151,9 +153,6 @@ jobs:
 
       - name: Run E2E tests
         uses: docker://mcr.microsoft.com/playwright:v1.62.1
-        env:
-          DATABASE_URL: 'postgresql://postgres:postgres@localhost:5432/test_db'
-          NEXT_PUBLIC_APP_URL: 'http://localhost:3008'
         with:
           args: sh -c "HOME=/root npm run test:e2e"
 
