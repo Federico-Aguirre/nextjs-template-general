@@ -14,6 +14,11 @@ export default defineConfig({
     },
   },
   test: {
+    server: {
+      deps: {
+        inline: ['next-intl'],
+      },
+    },
     coverage: {
       include: ['src/**/*'],
       exclude: ['src/**/*.stories.{js,jsx,ts,tsx}'],
