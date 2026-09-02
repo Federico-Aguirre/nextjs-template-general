@@ -7,11 +7,12 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     tsconfigPaths: true,
-    alias: {
-      'next/navigation': 'next/navigation.js',
-      'next/router': 'next/router.js',
-      'next/headers': 'next/headers.js',
-    },
+    // vitest.config.ts
+    alias: [
+      { find: /^next\/navigation$/u, replacement: 'next/navigation.js' },
+      { find: /^next\/headers$/u, replacement: 'next/headers.js' },
+      { find: /^next\/router$/u, replacement: 'next/router.js' },
+    ],
   },
   test: {
     coverage: {

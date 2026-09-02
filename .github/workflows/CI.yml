@@ -151,6 +151,9 @@ jobs:
 
       - name: Run E2E tests
         uses: docker://mcr.microsoft.com/playwright:v1.62.1
+        env:
+          DATABASE_URL: 'postgresql://postgres:postgres@localhost:5432/test_db'
+          NEXT_PUBLIC_APP_URL: 'http://localhost:3008'
         with:
           args: sh -c "HOME=/root npm run test:e2e"
 
